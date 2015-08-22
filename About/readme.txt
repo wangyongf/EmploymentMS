@@ -114,3 +114,7 @@ insert into emp (name,grade,email,salary) select name,grade,email,salary from em
 
 mvc的核心思想:
 强制程序员在编写项目时,把数据的输入,处理,输出三者分离
+
+我们在雇员管理系统中增加的新功能:
+1.登陆empManage.php页面的时候,显示该用户上次登录的时间
+2.打开登陆页面的时候,自动填写该用户的用户名和密码

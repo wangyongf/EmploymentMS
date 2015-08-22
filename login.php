@@ -1,3 +1,6 @@
+<?php 
+	require_once 'common.php';
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,12 +15,14 @@
 	<table>
 	<tr>
 		<td>用户id</td>
-		<td><input type="text" name="id" /></td>
+		<td><input type="text" name="id" value="<?php echo getCookieVal("id"); ?>"/></td>
 	</tr>
 	<tr>
 		<td>密　码</td>
-		
-		<td><input type="password" name="password"/></td>
+		<td><input type="password" name="password" value="<?php echo getCookieVal("password"); ?>"/></td>
+	</tr>
+	<tr>
+		<td colspan=2>自动登陆<input type="checkbox" name="keep"/></td>
 	</tr>
 	<tr>
 		<td><input type="submit" value="用户登陆"/></td>
