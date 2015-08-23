@@ -29,6 +29,9 @@
 	error_reporting(E_ALL^E_DEPRECATED^E_NOTICE);
 	require_once 'EmpService.class.php';
 	require_once 'Pagination.class.php';
+	require_once 'common.php';
+	//先验证
+	checkUserValidate();
 	
 	$empService=new EmpService();
 	

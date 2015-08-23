@@ -45,4 +45,15 @@
 		}
 	}
 	
+	function checkUserValidate()
+	{
+		session_start();
+		//判断用户合法(阻止非法登录到某个网页)
+		if(empty($_SESSION['loginuser']))
+		{
+			header("Location:login.php");
+			exit();
+		}
+	}
+	
 ?>

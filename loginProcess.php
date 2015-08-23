@@ -31,7 +31,11 @@
     $adminService=new AdminService();
     if($name=$adminService->checkAdmin($id, $password))
     {
+    	//把登陆信息写入cookie  'loginname':$name
+    	//把登陆表 把登陆用户的ip id...记录下来
     	//合法
+    	session_start();
+    	$_SESSION['loginuser']=$name;
     	header("Location:empManage.php?name=$name");
     	exit();
     }
